@@ -19,10 +19,11 @@ jobs:
           auto-update-conda: true
           python-version: "3.10"
 
+      - name: Setup Path Conda
+        run: echo "$CONDA/bin" >> $GITHUB_PATH
+
       - name: Install MLflow
-        shell: bash -el {0}
         run: pip install mlflow
 
       - name: Jalankan MLflow Project
-        shell: bash -el {0}
         run: mlflow run MLProject/
