@@ -26,4 +26,4 @@ jobs:
         run: pip install mlflow
 
       - name: Jalankan MLflow Project
-        run: mlflow run MLProject/
+        run: mlflow run MLProject/ --experiment-name="Sentimen_Tokopedia_Autolog"
